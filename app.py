@@ -27,6 +27,7 @@ def voice_analysis():
 
 @app.route('/choosepet', methods=['POST'])
 def pet_analysis():
+    "/music/choosepet.wav"
     petfile = request.files['file']
     print(petfile)
     petfile.save(os.path.join(app.config['UPLOAD_FOLDER'], 'pet' + petfile.filename))
