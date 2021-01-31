@@ -2,8 +2,8 @@ import random
 import speech_recognition as sr
 from playsound import playsound
 
-study = ['study', 'productive', 'school', 'grades', 'pressured', 'university', 'work', 'assignment', 'deadline', 'school', 'pencil', 'laptop']
-meditation = ['mditation', 'rest', 'calm', 'tired', 'anxious', 'soothing', 'burnout', 'stressed', 'headache', 'zen', 'recenter', 'recalibrate']
+study = ['productive', 'school', 'grades', 'pressured', 'university', 'work', 'assignment', 'deadline', 'school', 'pencil', 'laptop']
+meditation = ['rest', 'calm', 'tired', 'anxious', 'soothing', 'burnout', 'stressed', 'headache', 'zen', 'recenter', 'recalibrate']
 jasons = ['S1B.wav','S2B.wav','S3B.wav','S4B.wav','S5B.wav']
 jasonm = ['M1B.wav','M2B.wav','M3B.wav','M4B.wav','M5B.wav']
 olivias = ['S1G.wav','S2G.wav','S3G.wav','S4G.wav','S5G.wav']
@@ -45,9 +45,9 @@ def music(match):
         elif match == 'M' and pet == 'jason':
             playsound(random.choice(jasonm))
         elif match == 'S' and pet == 'olivia':
-            playsound(random.choice(sallys))
+            playsound(random.choice(olivias))
         elif match == 'M' and pet == 'olivia':
-            playsound(random.choice(sallym))
+            playsound(random.choice(oliviam))
     else:
         while match != False:
             matchWord(convert(audio_input))
@@ -56,7 +56,7 @@ def music(match):
             elif match == 'M' and pet == 'jason':
                 playsound(random.choice(jasonm))
             elif match == 'S' and pet == 'olivia':
-                playsound(random.choice(sallys))
+                playsound(random.choice(olivias))
             elif match == 'M' and pet == 'olivia':
-                playsound(random.choice(sallym))
+                playsound(random.choice(oliviam))
     return
