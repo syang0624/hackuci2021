@@ -10,7 +10,7 @@ jasonm = ['M1B.wav','M2B.wav','M3B.wav','M4B.wav','M5B.wav']
 olivias = ['S1G.wav','S2G.wav','S3G.wav','S4G.wav','S5G.wav']
 oliviam = ['M1G.wav','M2G.wav','M3G.wav','M4G.wav','M5G.wav']
 
-def petchoose():
+def petchoose(file):
     r = sr.Recognizer()
     with sr.WavFile(file) as source:
         audio = r.record(source)
