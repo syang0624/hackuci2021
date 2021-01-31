@@ -14,8 +14,8 @@ def send_js(path):
     return send_from_directory('music', path)
     
 @app.route('/')
-def index():
-    return "Welcome"
+def welcome():
+    return "/music/welcome.wav"
 
 @app.route('/voice-analysis', methods=['POST'])
 def voice_analysis():
@@ -25,5 +25,11 @@ def voice_analysis():
     result = start_analysis('./userupload/user' + userfile.filename)
     return result
 
-
+@app.route('/choosepet', methods=['POST'])
+def pet_analysis():
+    petfile = request.files['file']
+    print(petfile)
+    petfile.save(os.path.join(app.config['UPLOAD_FOLDER'], 'pet' + petfile.filename))
+    result = petchoose('./userupload/user' + petfile.filename)
+    return result
 
