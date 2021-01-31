@@ -4,6 +4,7 @@
 do this in terminal
 ``` bash
 pip3 install flask
+pip3 install Flask-Cors
 pip3 install --upgrade pip3
 pip3 install -U flask-cors
 pip3 install SpeechRecognition
