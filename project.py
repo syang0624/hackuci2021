@@ -10,6 +10,14 @@ jasonm = ['M1B.wav','M2B.wav','M3B.wav','M4B.wav','M5B.wav']
 olivias = ['S1G.wav','S2G.wav','S3G.wav','S4G.wav','S5G.wav']
 oliviam = ['M1G.wav','M2G.wav','M3G.wav','M4G.wav','M5G.wav']
 
+def petchoose():
+    r = sr.Recognizer()
+    with sr.WavFile(file) as source:
+        audio = r.record(source)
+        inputaudio = r.recognize_google(audio)
+        lst = [inputaudio]
+        petchoose = convert(lst).lower()
+    return petchoose
 
 
 def start_analysis(file):
