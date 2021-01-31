@@ -8,6 +8,7 @@ pip3 install --upgrade pip3
 pip3 install -U flask-cors
 pip3 install SpeechRecognition
 pip3 install -U PyObjC
+pip3 install scipy
 export FLASK_APP=app.py
 flask run
 ```
